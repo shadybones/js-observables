@@ -2,13 +2,16 @@
   "name": "js-observables",
   "version": "0.1.1",
   "description": "A completely custom implementation of ES7 (or ES8) Observables. With some sugar. Based on the proposal at tc39/proposal-observable. Not plug-n-play compatible with RxJS Observers, except where compliant with the spec.",
-  "main": "observables.js",
-  "files" :[
-    "observables.js",
-    "observables.es6.js"
+  "main": "dist/observables.js",
+  "files": [
+    "dist/"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/Observer.spec.js"
+  },
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-contrib-uglify": "3.2.1"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,4 @@
-import {Observer, Observable, Subscription} from "../src/Observer.es6.js"
+var {Observer, Observable, Subscription} = require("../src/Observer.es6");
 
 var code = 0;
 function assert(truth, desc, ...items){
@@ -21,9 +21,9 @@ assert(Subscription, "Subscription not imported");
 
 //instantiation
 assert(new Observer(()=>{}), "Observer instance failed");
-assertThrow(new Observer(), "Failed to throw on missing next function");
+assertThrow(()=>{new Observer()}, "Failed to throw on missing next function");
 assert(new Observer(()=>{},()=>{},()=>{}), "Observer instance failed");
-assertThrow(new Observer(()=>{},{},{}), "Failed to throw on bad complete/error function");
+assertThrow(()=>{new Observer(()=>{},{},{})}, "Failed to throw on bad complete/error function");
 
 assert(new Observable(), "Observable instance failed");
 assert((new Observable())[Symbol.for("Observable.subscriber")], "Observable failed to add noop subscriber");
