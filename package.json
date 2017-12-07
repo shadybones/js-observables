@@ -1,6 +1,6 @@
 {
   "name": "js-observables",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A completely custom implementation of ES7 (or ES8) Observables. With some sugar. Based on the proposal at tc39/proposal-observable. Not plug-n-play compatible with RxJS Observers, except where compliant with the spec.",
   "main": "dist/observables.js",
   "files": [
